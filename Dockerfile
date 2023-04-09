@@ -1,4 +1,6 @@
-FROM openjdk
-COPY target/*.jar /
-EXPOSE 8080
-ENTRYPOINT ["java","-jar","/my-app-1.0-SNAPSHOT.jar"]
+FROM ubuntu
+WORKDIR /tmp
+RUN echo "this is  challu file" >/tmp/challu1
+ENV name vasudha
+COPY file1 /tmp
+ADD test.tar.gz /tmp
